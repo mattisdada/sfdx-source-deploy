@@ -1,11 +1,13 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'sfdx-source-deploy'
+description: 'Deploy a changeset to a GH environment'
+author: 'matthew-gladman'
 inputs:
-  milliseconds: # change this
+  environment-name:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: 'The environment name that will show in GitHub'
+  action:
+    required: true
+    description: 'Either `create` or `deploy`'
 runs:
   using: 'node16'
   main: 'dist/index.js'
